@@ -1,0 +1,11 @@
+.reset_form{
+    cursor: pointer;
+}
+
+#Nuevo{
+    margin-bottom: 5px;
+}
+.list-group-item_per{
+    background: none;
+    border: none
+}

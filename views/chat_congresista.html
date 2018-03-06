@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chat congresista</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- chat -->
+  <link rel="stylesheet" href="../dist/css/style_chat.css">
+  <link rel="stylesheet" href="../dist/css/estilos_template.css">
+  <link rel="stylesheet" href="../dist/css/materialize.css">
+ 
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="container app col-sm-12"> 
+    <div class="row app-one">
+
+      <div class="col-sm-4 side">
+        <div class="side-one">
+          <!-- Heading -->
+          <div class="row heading">
+            <div class="col-sm-3 col-xs-3 heading-avatar">
+              <div class="heading-avatar-icon">
+                <img class="mostrar_ventana" data-ventana="perfil" src="../dist/img/img1.jpg">
+              </div>
+            </div>
+            <div class="col-sm-1 col-xs-1 heading-dot pull-right" title="Opciones">
+                <i class="fa fa-ellipsis-v fa-2x  pull-right dropdown-toggle" aria-hidden="true" id="menu1" data-toggle="dropdown"></i>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li class="mostrar_ventana" data-ventana="mas_grupo" role="presentation"><a role="menuitem" tabindex="-1" href="#">Nuevo Grupo</a></li>
+                    <li class="mostrar_ventana" data-ventana="perfil" role="presentation"><a role="menuitem" tabindex="-1" href="#">Perfil</a></li>
+                    <li class="mostrar_ventana" data-ventana="archivados" role="presentation"><a role="menuitem" tabindex="-1" href="#">Archivados</a></li>
+                    <li class="mostrar_ventana" data-ventana="msj_destacados" role="presentation"><a role="menuitem" tabindex="-1" href="#">Destacados</a></li>    
+                    <li class="mostrar_ventana" data-ventana="config_app" role="presentation"><a role="menuitem" tabindex="-1" href="#">Configuración</a></li>  
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Salir</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 col-xs-2 heading-compose mostrar_ventana pull-right" data-ventana="side-two" title="Nuevo chat">
+              <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
+            </div>
+
+                    
+          </div>
+          <!-- Heading End -->
+
+          <!-- SearchBox -->
+          <div class="row searchBox">
+            <div class="col-sm-12 searchBox-inner">
+              <div class="form-group has-feedback">
+                <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Buscar">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Box End -->
+          <!-- sideBar -->
+          <div class="row sideBar">
+            <div class="row sideBar-body for-chat" data-chat="person1">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body for-chat" data-chat="person2">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img2.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Robinson Vargas
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat" data-tipo="group" data-chat="person4">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/got.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">GOT
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat" data-chat="person3">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/avatar3.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Estefania toro
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/avatar04.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/avatar5.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/avatar.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Sidebar End -->
+        </div>
+        <div class="venta_per side-two ">
+
+          <!-- INICIO DE NUEVA CONVERSACION -->
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="side-two">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                Nuevo chat
+              </div>
+            </div>
+          </div>
+
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+              <div class="form-group has-feedback">
+                <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Buscar personas">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+            <div class="row sideBar-body for-chat" data-chat="person1">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil Her
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body for-chat" data-chat="person2">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img2.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Manuel perez
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">11:35 pm
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body for-chat">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img class="imgUser" src="../dist/img/img1.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Maria Gil
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">20:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- inicio perfil -->
+        <div class="venta_per perfil ">
+
+          <!-- INICIO DE NUEVA CONVERSACION -->
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="perfil">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                Mi perfil
+              </div>
+            </div>
+          </div>
+
+            <!-- perfil_info  -->
+            <div class="row composeBox">
+              <div class="col-sm-12 composeBox-inner">
+                <div class="col-sm-7 col-xs-12 col-md-offset-2">
+                  <form action="#" id="info_perfil">
+                    <span class="grey-text"> <label for=""><i class="fa fa-user-circle fa-3x" > </i> &nbsp;</label>  </span>
+                    <input type="text" class="form_mi" name="" id="my_name_is" value="Robinson vargas">
+                    
+                  </form>
+                  
+                </div>
+  
+                <div class="col-sm-2 col-xs-2">
+                    <label for="my_name_is"><i class="fa fa-pencil fa-2x" ></i></label>
+                </div>
+              </div>
+            </div>
+            <!-- perfil_info -->
+
+              <!-- perfil_info  -->
+            <div class="row composeBox">
+              <div class="col-sm-12 composeBox-inner">
+                <div class="col-sm-7 col-xs-12 col-md-offset-2">
+                  <form action="#" id="info_perfil">
+                      <span class="grey-text"> <label for=""><i class="fa fa-info-circle fa-3x" ></i>&nbsp;&nbsp;&nbsp;</label></span>
+                  <input type="text" class="form_mi" name="" id="info" value="Desarrollador">
+                      
+                </div>
+  
+                <div class="col-sm-2 col-xs-2">
+                    <label for="info"><i class="fa fa-pencil fa-2x" ></i></label> 
+                </div>
+              </div>
+            </div>
+            <!-- perfil_info -->
+
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+            <div class="avatar-icon-perfil col-sm-6 col-xs-6 col-md-offset-3">
+                    <input type="file" name="img_ava" id="subir_img">
+                    <label for="subir_img">
+                        <img class="img_ava" src="../dist/img/got.jpg">
+                    </label>
+                </form>
+            </div>
+          </div>
+          
+        </div>
+        <!-- fin perfil -->
+
+        <!-- inicio nuevo grupo -->
+        <div class="venta_per mas_grupo">
+
+            <!-- INICIO DE NUEVA CONVERSACION -->
+          <div class="row newMessage-heading">
+                <div class="row newMessage-main">
+                  <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="mas_grupo">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-sm-8 col-xs-8 newMessage-title">
+                    Añadir participantes
+                  </div>
+                  <div class="col-sm-2 col-xs-2 newMessage-back mostrar_ventana" data-ventana="confir_grupo">
+                    <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+    
+            <!-- LISTA  -->
+            <div class="row composeBox">
+                <div class="col-sm-12 composeBox-inner">
+                    <div class="form-group has-feedback">
+                        <form action="#" class="form-bus">
+                            <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Nombre de la persona que quires agregar">
+                            <!-- <textarea name="" class="form-control" id="" placeholder="Nombre de grupo" cols="30" rows="5"></textarea>-->
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span> 
+                        </form>
+                        <div class="list_miembros">
+                            <div class="col-sm-9 col-xs-7 mini_body_gru">
+                                <div class="mini-sideBar eliminar_mini">
+                                    <div class="">
+                                        <div class="col-sm-2 col-xs-2 sideBar-avatar">
+                                            <div class="mini-avatar-icon">
+                                            <img class="" src="../dist/img/img1.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-xs-8 sideBar-main">
+                                            <div class="row">
+                                                <div class="mini-sideBar-name">
+                                                    <span class="name-meta">Robinson vargas </span>
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <i class="glyphicon glyphicon-remove form-control-feedback mini-icon"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ComposeBox End -->
+    
+            <!-- sideBar -->
+            <div class="row compose-sideBar">
+            
+                <div class="row sideBar-body for-new-grupo">
+                    <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                        <div class="avatar-icon">
+                        <img class="imgUser_n_g" src="../dist/img/img1.jpg">
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-9 sideBar-main">
+                        <div class="row">
+                        <div class="col-sm-8 col-xs-8 sideBar-name">
+                            <span class="name-meta_n_g">Rosa Gil
+                        </span>
+                        </div>
+                        <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                            <span class="time-meta pull-right">20:18
+                        </span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row sideBar-body for-new-grupo">
+                    <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                        <div class="avatar-icon">
+                        <img class="imgUser_n_g" src="../dist/img/img1.jpg">
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-9 sideBar-main">
+                        <div class="row">
+                        <div class="col-sm-8 col-xs-8 sideBar-name">
+                            <span class="name-meta_n_g">Hector Gil
+                        </span>
+                        </div>
+                        <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                            <span class="time-meta pull-right">20:18
+                        </span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row sideBar-body for-new-grupo">
+                    <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                        <div class="avatar-icon">
+                        <img class="imgUser_n_g" src="../dist/img/img1.jpg">
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-9 sideBar-main">
+                        <div class="row">
+                        <div class="col-sm-8 col-xs-8 sideBar-name">
+                            <span class="name-meta_n_g">Pedro Gil
+                        </span>
+                        </div>
+                        <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                            <span class="time-meta pull-right">20:18
+                        </span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin nuevo grupo -->
+
+        <!-- inicio confirmar grupo -->
+        <div class="venta_per confir_grupo">
+
+            <!-- INICIO DE NUEVA CONVERSACION -->
+            <div class="row newMessage-heading">
+                <div class="row newMessage-main">
+                <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="confir_grupo">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </div>
+                <div class="col-sm-10 col-xs-10 newMessage-title">
+                    Nuevo grupo
+                </div>
+                </div>
+
+            </div>
+    
+            <!-- body confirmar grupo  -->
+            <div class="row composeBox">
+                <div class="col-sm-12 composeBox-inner">
+                    <div class="col-sm-12 col-xs-12 text-center form-group">
+                        <form action="#" id="info_perfil">
+                            
+                            <!-- col -->
+                            <div class="col-sm-12 col-md-12 form-group campo_prof">
+                                <input type="text" id="" name="" class="form_nom_grupo form-control" placeholder="Nombre del grupo" required >
+                            </div>
+                            <!-- /col fin -->
+                            
+                        </form>
+                    
+                    </div>
+                </div>
+            </div>
+            <!-- body confirmar grupo -->
+    
+            <!-- sideBar -->
+            <div class="row compose-sideBar">
+                <div class="avatar-icon-perfil col-sm-6 col-xs-6 col-md-offset-3">
+                    <form action="#">
+                        <input type="file" name="img_ava" id="subir_img">
+                        <label for="subir_img">
+                            <img class="img_ava" src="../dist/img/got.jpg">
+                        </label>
+                        
+                    </form>
+                </div>
+            </div>
+            
+            </div>
+        <!-- inicio confirmar grupo -->
+
+        <!-- inicio chat archivados -->
+        <div class="venta_per archivados">
+          <!-- INICIO DE NUEVA CONVERSACION -->
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="archivados">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                Chat archivados
+              </div>
+            </div>
+          </div>
+
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+              <div class="form-group has-feedback">
+                <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Buscar chat">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+              <div class="avatar-icon-perfil col-sm-8 col-xs-8 col-md-offset-3">
+                <label for="">
+                    <img class="img_ava" src="../dist/img/da.gif"><br>
+                    
+                    <!-- <i class="img_ava fa fa-user fa-4x"></i> -->
+                </label>
+                <label for=""><span class="grey-text" > No tienes Chat archivados</span></label>
+                      
+              </div>
+          </div>
+        </div>
+        <!-- fin chat archivados -->
+
+        <!-- inicio mensajes destacados -->
+        <div class="venta_per msj_destacados">
+          <!-- INICIO DE NUEVA CONVERSACION -->
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="msj_destacados">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-8 col-xs-8 newMessage-title">
+                  Mensajes destacados
+              </div>
+              <div class="col-sm-2 col-xs-2 newMessage-back">
+                <i class="fa fa-ellipsis-v dropdown-toggle" aria-hidden="true" id="menu2" data-toggle="dropdown"></i>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+                    <li class="mas_grupo_link" role="presentation"><a role="menuitem" tabindex="-1" href="#">Desmarcar todos los mensajes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+              <div class="form-group has-feedback">
+                <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Buscar chat">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+              <div class="avatar-icon-perfil col-sm-8 col-xs-8 col-md-offset-3">
+                <label for="">
+                    <img class="img_ava" src="../dist/img/da.gif"><br>
+                    
+                    <!-- <i class="img_ava fa fa-user fa-4x"></i> -->
+                </label>
+                <label for=""><span class="grey-text" > No tienes mensajes destacados</span></label>
+                      
+              </div>
+          </div>
+        </div>
+        <!-- fin mensajes destacados -->
+
+        <!-- inicio configurar app -->
+        <div class="venta_per config_app">
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="config_app">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                Configuración
+              </div>
+            </div>
+          </div>
+  
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+                <div class="form-group has-feedback">
+                    <div class="list_miembros">
+                        <div class="row sideBar-body for-new-grupo">
+                            <div class="col-sm-3 col-xs-3 sideBar-avatar ">
+                                <div class="avatar_medio">
+                                <img class="" src="../dist/img/got.jpg">
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-xs-9 sideBar-main">
+                                <div class="row">
+                                  <div class="col-sm-12 col-xs-12 sideBar-name">
+                                    <span class="name-meta_n_g">&nbsp;&nbsp; Robinson Vargas</span><br>
+                                    <span class="time-meta">&nbsp;&nbsp; Web developer full</span>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+  
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                    <i class="grey-text fa fa-image fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                    <div class="col-sm-8 col-xs-8 sideBar-name">
+                        <span class="name-meta_n_g">Fondo de pantalla </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body mostrar_ventana" data-ventana="confi_campaña">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                    <i class="grey-text fa fa-volume-up fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                    <div class="col-sm-8 col-xs-8 sideBar-name">
+                        <span class="name-meta_n_g">Configurar campaña </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                  <i class="grey-text fa fa-ban fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                      <span class="name-meta_n_g">Bloqueado
+                  </span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body mostrar_ventana" data-ventana="ayuda_app">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                    <i class="grey-text fa fa-question-circle fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                    <div class="col-sm-8 col-xs-8 sideBar-name">
+                        <span class="name-meta_n_g">ayuda</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- fin configurar app -->
+
+        <!-- inicio ayuda app -->
+        <div class="venta_per ayuda_app">
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="ayuda_app">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                  Ayuda
+              </div>
+            </div>
+          </div>
+  
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+              <div class="avatar-icon-perfil col-sm-12 col-xs-12 text-center">
+                <label for="">
+                    <img class="img_ava" src="../dist/img/da.gif"><br>
+                </label><br>
+                <label for=""><span class="grey-text" > Versión 0.1 </span></label>
+                      
+              </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+  
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+
+            <div class="row sideBar-body for-new-grupo">
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                      <span class="name-meta_n_g">Preguntas frecuentes
+                  </span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body for-new-grupo">
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                      <span class="name-meta_n_g">Contáctos
+                  </span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body for-new-grupo">
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                      <span class="name-meta_n_g">Términos y privacidad
+                  </span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- fin ayuda -->
+
+        <!-- inicio buscar mensajes -->
+        <div class="venta_per buscar_msj">
+          <!-- INICIO DE NUEVA CONVERSACION -->
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="buscar_msj">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">Buscar mensajes</div>
+            </div>
+          </div>
+
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+              <div class="form-group has-feedback">
+                <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Buscar...">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+              <div class="avatar-icon-perfil col-sm-12 col-xs-12 text-center"><br>
+                <label for=""><span class="grey-text" > Buscando...</span></label>
+                      
+              </div>
+          </div>
+        </div>
+        <!-- fin buscar mensajes -->
+
+        <!-- inicio informacion del contacto -->
+        <div class="venta_per info_contact">
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="info_contact">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                Info. del contacto
+              </div>
+            </div>
+          </div>
+  
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+                <div class="form-group has-feedback">
+                    <div class="list_miembros">
+                        <div class="row sideBar-body for-new-grupo imgUser_me">
+                            <div class="col-sm-3 col-xs-3 sideBar-avatar ">
+                                <div class="avatar_medio">
+                                <img class="" src="../dist/img/got.jpg">
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-xs-9 sideBar-main">
+                                <div class="row">
+                                  <div class="col-sm-12 col-xs-12 sideBar-name">
+                                    <span class="name-meta_n_g">&nbsp;&nbsp; Robinson Vargas</span>
+                                    <span class="time-meta">&nbsp;&nbsp; Web developer full</span><br>
+                                    <span class="name-meta_n_g grey-text pull-right">&nbsp;&nbsp; Creado el 25/02/2018 a las 18:02</span>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+  
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                    <i class="grey-text fa fa-info-circle fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                    <div class="col-sm-8 col-xs-8 sideBar-name">
+                        <span class="name-meta_n_g">Con Dios todo es posible <i class="fa fa-thumbs-up"></i> </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                    <i class="red-text fa fa-thumbs-down fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                    <div class="col-sm-8 col-xs-8 sideBar-name">
+                        <span class="name-meta_n_g red-text">Reportar spam </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                  <i class="red-text fa fa-ban fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                      <span class="name-meta_n_g red-text">Bloquear
+                  </span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                  <div class="avatar-icon">
+                    <i class="red-text fa fa-remove fa-2x"></i>
+                  </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                  <div class="row">
+                    <div class="col-sm-8 col-xs-8 sideBar-name">
+                        <span class="name-meta_n_g red-text">Eliminar</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- fin informacion del contacto -->
+
+        <!-- inicio de nueva campaña new_company -->
+        <div class="venta_per new_campaña">
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="new_campaña" title="Atras">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-8 col-xs-8 newMessage-title">
+                Nueva campaña
+              </div>
+              <div class="col-sm-2 col-xs-2 newMessage-back" title="Guardar">
+                <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+  
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+                <div class="form-group has-feedback">
+                  <form action="#" class="form-bus">
+                      <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Nombre de la campaña">
+                      <input type="file" id="icon_campa">
+                  </form>
+                    <div class="">
+                        <div class="col-sm-12 composeBox-inner">
+                          <div class="avatar-icon-campa col-sm-12 col-xs-12 text-center">
+                            <label for="icon_campa">
+                                <img class="img_ava" src="../dist/img/da.gif"><br>
+                            </label><br>
+                            <label for=""><span class="grey-text" > Icono </span></label>
+                                  
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+  
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+
+              <div class="col-sm-12 composeBox-inner">
+                <div class="avatar-video-campa col-sm-12 col-xs-12 text-center">
+                  <label for="icon_campa">
+                      <img class="img_ava" src="../dist/img/da.gif">
+                      <img class="img_ava" src="../dist/img/da.gif"><br>
+                  </label><br>
+                  <span class="grey-text" > Intro | final</span><br>
+                  <label for="icon_campa">
+                    <img class="img_ava" src="../dist/img/da.gif">
+                  </label><br>
+                  <label for=""><span class="grey-text" > Video completo </span></label>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- fin de nueva campaña new_company -->
+
+        <!-- inicio de configurar campaña config_company -->
+        <div class="venta_per confi_campaña">
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back cerrar_ventana" data-ventana="confi_campaña">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-8 col-xs-8 newMessage-title">
+                Configurar campaña
+              </div>
+              <div class="col-sm-2 col-xs-2 newMessage-back" title="Guardar">
+                <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+  
+          <!-- LISTA  -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+                <div class="form-group has-feedback">
+                  <form action="#" class="form-bus">
+                      <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Nombre de la campaña">
+                      <input type="file" id="icon_campa">
+                  </form>
+                    <div class="">
+                        <div class="col-sm-12 composeBox-inner">
+                          <div class="avatar-icon-campa col-sm-12 col-xs-12 text-center">
+                            <label for="icon_campa">
+                                <img class="img_ava" src="../dist/img/da.gif"><br>
+                            </label><br>
+                            <label for=""><span class="grey-text" > Icono </span></label>
+                                  
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+  
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+
+              <div class="col-sm-12 composeBox-inner">
+                <div class="avatar-video-campa col-sm-12 col-xs-12 text-center">
+                  <label for="icon_campa">
+                      <img class="img_ava" src="../dist/img/da.gif">
+                      <img class="img_ava" src="../dist/img/da.gif"><br>
+                  </label><br>
+                  <span class="grey-text" > Intro | final</span><br>
+                  <label for="icon_campa">
+                    <img class="img_ava" src="../dist/img/da.gif">
+                  </label><br>
+                  <label for=""><span class="grey-text" > Video completo </span></label>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- fin de configurar campaña config_company -->
+
+        
+      </div>
+
+
+      <!-- FIN DE NUEVA CONVERSACION -->
+
+      <!-- Conversación Start -->
+      <div class="col-sm-8 conversation">
+        <!-- cabacera -->
+        <div class="row heading">
+          <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+              <img class="imgUser_otro" src="../dist/img/img1.jpg">
+            </div>
+          </div>
+          <div class="col-sm-5 col-xs-5 heading-name">
+            <a class="heading-name-meta">Maria Gil
+            </a>
+            <span class="heading-online">Online</span>
+          </div>
+          
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+              <span class="fa fa-ellipsis-v fa-2x  pull-right dropdown-toggle drop_msj_inter" aria-hidden="true" id="menu5" data-toggle="dropdown"></span>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
+                  <li class="mostrar_ventana" data-ventana="info_contact" role="presentation"><a role="menuitem" tabindex="-1" href="#">Info. del contacto</a></li>
+                  <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Seleccionar mensajes</a></li>
+                  <li class="#" role="presentation" data-toggle="modal" data-target=".modal_silenciar"><a role="menuitem" tabindex="-1" href="#">Silenciar</a></li>
+                  <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Vaciar Chat</a></li>    
+                  <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Eliminar Chat</a></li>  
+              </ul>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+            <span class="fa fa-paperclip fa-2x  pull-right dropdown-toggle drop_msj_inter" aria-hidden="true" id="menu4" data-toggle="dropdown" title="Adjuntar"></span>
+            <ul class="dropdown-menu dropdown_perso" role="menu" aria-labelledby="menu4">
+                <li class="text-center open_f1" role="presentation"><a role="menuitem" class="ico_bonito" tabindex="-1" href="#"> <i class="fa fa-image fa-2x"></i></a></li>
+                <li class="text-center" role="presentation"><a role="menuitem" class="ico_bonito" tabindex="-1" href="#"> <i class="fa fa-camera fa-2x"></i></a></li>
+                <li class="text-center open_f2" role="presentation"><a role="menuitem" class="ico_bonito" tabindex="-1" href="#"><i class="fa fa-file fa-2x"></i></a></li>    
+                <li class="text-center" role="presentation"><a role="menuitem" class="ico_bonito" tabindex="-1" href="#"><i class="fa fa-user-circle fa-2x"></i></a></li>  
+                </a></li>
+            </ul>
+            
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right" title="Buscar mensajes">
+            <span class="fa fa-search fa-2x  pull-right mostrar_ventana" data-ventana="buscar_msj" aria-hidden="true"></span>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right mostrar_ventana" data-ventana="new_campaña" title="Nueva campaña">
+            <span class="fa fa-users fa-2x  pull-right " aria-hidden="true"><b>+</b></span>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right my_map hide" data-ventana="" title="Votar">
+            <span class="fa fa-map-marker fa-2x  " aria-hidden="true"></span>
+          </div>
+          
+        </div>
+        <!-- Heading End -->
+        
+        <!-- mensaje -->
+        <div class="row message hide" data-chat="person1" id="person1">
+
+          <div class="row message-previous">
+            <div class="col-sm-12 previous">
+              <a onclick="previous(this)" id="ankitjain28" name="20">
+              Hoy, 11:12 AM
+              </a>
+            </div>
+          </div>
+
+          <div class="row message-body">
+              <div class="col-sm-12 message-main-receiver">
+                  <div class="receiver">
+                    <i class="fa fa-ellipsis-v fa-2x  pull-right dropdown-toggle drop_msj_inter" aria-hidden="true" id="menu3" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Responder</a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Reenviar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Destacar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Eliminar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Compartir </a></li>    
+                        
+                    </ul>
+                      <div class="message-text">
+                          Lorem Ipsum es simplemente el texto
+                      </div>
+                      <span class="message-time pull-right">10:35 am</span>
+                  </div>
+              </div>
+
+              <div class="col-sm-12 message-main-receiver">
+                  <div class="receiver">
+                    <i class="fa fa-ellipsis-v fa-2x  pull-right dropdown-toggle drop_msj_inter" aria-hidden="true" id="menu3" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Responder</a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Reenviar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Destacar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Eliminar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Compartir </a></li>    
+                        
+                    </ul>
+                    <div class="message-text">
+                        co??
+                    </div>
+                    <span class="message-time pull-right">10:40 am</span>
+                  </div>
+              </div>
+
+              <div class="col-sm-12 message-main-receiver">
+                <div class="receiver">
+                  <i class="fa fa-ellipsis-v fa-2x  pull-right dropdown-toggle drop_msj_inter" aria-hidden="true" id="menu3" data-toggle="dropdown"></i>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                      <li class="mas_grupo_link" role="presentation"><a role="menuitem" tabindex="-1" href="#">Responder</a></li>
+                      <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Reenviar </a></li>
+                      <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Destacar </a></li>
+                      <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Descargar </a></li>
+                      <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Eliminar </a></li>
+                      <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Compartir</a></li>    
+                  </ul>
+                  <div class="message-text">
+                    <img class="img_preview_reply" src="../img/header-bg.jpg">
+                  </div>
+                  <span class="message-time pull-right">10:40 am</span>
+                </div>
+            </div>
+          </div>
+          
+          <!-- respuesta -->
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="dropup">
+                    <i class="fa fa-ellipsis-v fa-2x  pull-right dropdown-toggle drop_msj_inter" aria-hidden="true" id="" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu dropdown-menu_per">
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Responder</a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Reenviar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Destacar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Eliminar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Compartir </a></li>    
+                    </ul>
+                  </div>
+                <div class="message-text">
+                    hola xd
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="dropup">
+                    <i class="fa fa-ellipsis-v fa-2x  pull-right dropdown-toggle drop_msj_inter" aria-hidden="true" id="" data-toggle="dropdown"></i>
+                    
+                    <ul class="dropdown-menu dropdown-menu_per">
+                        <li class="mas_grupo_link" role="presentation"><a role="menuitem" tabindex="-1" href="#">Responder</a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Reenviar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Destacar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Descargar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Eliminar </a></li>
+                        <li class="#" role="presentation"><a role="menuitem" tabindex="-1" href="#">Compartir </a></li>    
+                        
+                    </ul>
+                  </div>
+                <div class="message-text">
+                  <img class="img_preview_reply" src="../img/header-bg.jpg">
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- mensaje End -->
+
+        <!-- mensaje -->
+        <div class="row message hide" data-chat="person2" id="person2">
+
+          <div class="row message-previous">
+            <div class="col-sm-12 previous">
+              <a onclick="previous(this)" id="ankitjain28" name="20">
+              Hoy, 11:12 AM
+              </a>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                  Hola, mundo !!!!
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                  Hola, mundo !!!!
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                    ajajajjajaj
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- mensaje End -->
+        
+        <!-- mensaje -->
+        <div class="row message hide" data-chat="person3" id="person3">
+
+          <div class="row message-previous">
+            <div class="col-sm-12 previous">
+              <a onclick="previous(this)" id="ankitjain28" name="20">
+              Hoy, 11:12 AM
+              </a>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                  que haces!!!!
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                  que haces!!!!
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                  en la casa 
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- mensaje End -->
+          <!-- mensaje de grupo -->
+          <div class="row message hide" data-chat="person4" id="person4">
+
+          <div class="row message-previous">
+            <div class="col-sm-12 previous">
+              <a onclick="previous(this)" id="ankitjain28" name="20">
+              Hoy, 11:12 AM
+              </a>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                  Se salió la 8 tempora!!!!
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                  Es enserio!!!!
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                  No lo puedo creer !!!!!!!!!!!!!!!!!! 
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                  No lo puedo creer !!!!!!!!!!!!!!!!!! 
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                  No lo puedo creer !!!!!!!!!!!!!!!!!! 
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                  No lo puedo creer !!!!!!!!!!!!!!!!!! 
+                </div>
+                <span class="message-time pull-right">
+                  10:30 am
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row message-body">
+              <div class="col-sm-12 message-main-sender">
+                <div class="sender">
+                  <div class="message-text">
+                    No lo puedo creer !!!!!!!!!!!!!!!!!! 
+                  </div>
+                  <span class="message-time pull-right">
+                    10:30 am
+                  </span>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <!-- Message Box End -->
+
+        <!-- Reply Box -->
+        <div class="row reply">
+          <div class="col-sm-1 col-xs-1 reply-emojis">
+            <i class="fa fa-smile-o fa-2x"></i>
+          </div>
+          <div class="col-sm-9 col-xs-9 reply-main">
+            <textarea class="form-control text_responder" rows="1" id="comentario" name="comentario" onkeypress="if (event.keyCode == 13) enviar_msj()"></textarea>
+          </div>
+          <div class="col-sm-1 col-xs-1 reply-send">
+            <i class="fa fa-send fa-2x responder" aria-hidden="true"></i>
+          </div>
+        </div>
+        <!-- Reply Box End -->
+        <div class="venta_per_right side-two2">
+
+          <!-- INICIO DE NUEVA CONVERSACION -->
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 map_back">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                Mapa
+              </div>
+            </div>
+          </div>
+
+          
+
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+              <div class="col-sm-12 col-xs-12 cont_map">
+                
+              </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+      <!-- Conversación End -->
+    </div>
+    <!-- App One End -->
+    <form action="#">
+      <input type="file" name="f2" id="f2">
+      <input type="file" name="f1" id="f1">
+    </form>
+</div>
+<!-- inicio modal silenciar -->
+<div class="modal fade modal_silenciar" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content col-md-8 col-md-offset-2">
+      <div class="modal-header">
+        <h3 class="modal-title text-center">Silenciar a " Maria gil "</h3>
+      </div>
+      <div class="modal-body">
+        <p> <input type="radio" name="radi"> 8 horas.</p>
+        <p> <input type="radio" name="radi"> 1 semana.</p>
+        <p> <input type="radio" name="radi"> 1 año.</p>
+        <div class="text-right">
+
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- inicio modal silenciar -->
+
+<!-- inicio modal silenciar -->
+<div class="modal fade model_img_preview_reply" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img class="img_preview_reply_modal" src="../img/header-bg.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- inicio modal silenciar -->
+            
+
+
+
+<!-- jQuery 2.2.3 -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+<script src="../plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- chat -->
+<script src="../dist/js/chat.js"></script>
+<script type="text/javascript" >
+    $(".message").animate({ scrollTop: $('.message')[0].scrollHeight},0);
+</script>
+
+</body>
+</html>
